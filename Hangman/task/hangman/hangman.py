@@ -1,8 +1,8 @@
 import random
 import re
 
-class Game:
 
+class Game:
     lives = 8
     words = ['python', 'java', 'kotlin', 'javascript']
     word = random.choice(words)
@@ -26,8 +26,6 @@ class Game:
         return ch
 
     def play(self):
-
-        print("H A N G M A N")
         while self.lives:
             ch = self.read_char()
             if ch in self.word:
@@ -49,5 +47,14 @@ class Game:
         if not self.lives:
             print("You lost!")
 
+
 game = Game()
-game.play()
+print("H A N G M A N")
+while True:
+    cmd = input('Type "play" to play the game, "exit" to quit: ')
+    if cmd == "play":
+        game.play()
+        print()
+    elif cmd == "exit":
+        break
+
